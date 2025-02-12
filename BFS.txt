@@ -1,0 +1,16 @@
+Push the starting node in the queue Q.
+Create a visited array V.
+
+The visited array is of size n. (n here is the number of nodes in the graph)
+
+So, as we traverse the nodes (nodes are supposed marked from 1 to n), 
+we make the corresponding index in the array as 1.
+
+Make the adjacency list for all the nodes.
+
+As we start popping the node from the queue, refer the adjacency list
+for that node and push the corresponding nodes into the queue.
+(Remember to check the visited array to see if a node
+has already been visited then no need to add it in the queue again)
+
+
