@@ -1,0 +1,20 @@
+The problem requires us to determine the minimum time needed for all fresh oranges to rot. If it's impossible for all oranges to rot, we return `-1`.  
+
+### **Approach:**
+We use **Breadth-First Search (BFS)** because it allows us to process all oranges that rot at the same time, making it ideal for problems involving simultaneous spread.
+
+### **Solution Breakdown:**
+1. **Initialize the Queue and Count Fresh Oranges**  
+   - Add all initially rotten oranges to the queue, storing their `(row, column, time)`.  
+   - Count the total number of fresh oranges.
+
+2. **Perform BFS to Simulate Rotting Process**  
+   - Process each rotten orange in the queue and attempt to rot its **adjacent** fresh oranges (up, down, left, right).  
+   - If a fresh orange rots, decrease the fresh count and add it to the queue with `time + 1`.  
+   - Track the maximum time taken.
+
+3. **Check for Remaining Fresh Oranges**  
+   - If all fresh oranges have rotted, return the time taken.  
+   - If any fresh oranges remain, return `-1`.  
+
+This ensures an efficient and structured approach to solving the problem. 🚀

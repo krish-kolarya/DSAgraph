@@ -1,0 +1,13 @@
+In this question we have to find the number of provinces. A province is a group of nodes connected to each other. 
+A single node is considered to be one province too. We are provided with the adjacency matrix. We have to find the number 
+of provinces in the graph.
+
+Idea: 
+The idea is to first convert the matrix into an adjacency list. Then we maintain a visited array and start by traversing it. 
+Now when apply dfs on a province, every node of the province is visited and simultaneously marked in the visited array. 
+We increase the count by 1 at the end after applying dfs on a province. Now when we traverse the unvisited array and 
+encounter any node it means we have encountered a node of some other province, we apply dfs on that node. 
+we end up marking all the nodes in the new province. We keep on doing this until we reach the end of the visited array.
+
+The count is the final answer. 
+So the number of unvisited nodes we encounter (after applying dfs every time) is the number of provinces.
