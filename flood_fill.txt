@@ -1,0 +1,5 @@
+We are given a matrix having numbers. Each number means some color. We are also given the starting (row,col) and the color
+number (this will be used to color the cells in matrix). So, all the cells having the same color as that in (row,color) will
+be changed to the color provided. We use bfs as we have to simultaneously check in all four directions and change color.
+Maintain a direction array for all four directions, iterate through this array and keep on calculating the new (row,col)
+everytime, check if it is valid and then add it to the queue.
