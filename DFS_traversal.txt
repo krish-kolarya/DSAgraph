@@ -1,0 +1,8 @@
+In dfs traversal we travel one node at a time. We ensure that all the connected nodes are visited.
+
+First, get the adjacency list. Declare a visited list. Declare a variable for the starting node. 
+
+In the dfs function, mark the current node as visited, add it to the result list and then iterate through the adjacency list
+of the node and recursively call the dfs function for any unvisited nodes.
+
+once all the nodes are visited, print the result list.

@@ -1,4 +1,11 @@
 import java.util.*;
+class Pair{
+    int v1,v2;
+    Pair(int u1,int u2){
+        this.v1 = u1;
+        this.v2 = u2;
+    }
+}
 class flood_fill{
 public static void main(String [] args){
     Scanner sc = new Scanner(System.in);
@@ -26,7 +33,7 @@ public static void main(String [] args){
 }
 public static int[][] bfs(int[][] matrix, int sr, int sc,int color){
     int start = matrix[sr][sc];
-    if(color  == start) return matrix;
+    if(color == start) return matrix;
     matrix[sr][sc] = color;
     Queue<Pair> Q = new LinkedList<>();
     //Pair pair = new Pair(sr,sc);
@@ -47,11 +54,4 @@ public static int[][] bfs(int[][] matrix, int sr, int sc,int color){
     }
     return matrix;
 }
-}
-class Pair{
-    int v1,v2;
-    Pair(int u1,int u2){
-        this.v1 = u1;
-        this.v2 = u2;
-    }
 }

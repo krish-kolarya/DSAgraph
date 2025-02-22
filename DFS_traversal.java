@@ -22,7 +22,7 @@ public class DFS_traversal {
             int u = sc.nextInt();
             int v = sc.nextInt();
             adj.get(u).add(v);
-            adj.get(v).add(u);
+            adj.get(v).add(u); 
         }
         int start = 0;
         boolean [] visited = new boolean[V];

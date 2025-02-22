@@ -35,14 +35,14 @@ public class dfsCycleDetect {
         visited[current] = 1;
         for(Integer it : adj.get(current)){
             if(visited[it] == 0){
-                if(dfsCycleDetection(adj, visited, it, current)){
+                if(dfsCycleDetection(adj, visited, it, current)){ // if we have already found a cycle
                     return true;
                 }
             }
-            else if(it != parent){
+            else if(visited[it] == 1 && it != parent){ // if the node we want to go to is already visited and it is not same as our current node's parent then we have found a cycle.
                 return true;
             }
         }
-        return false;
+        return false; // we did not find a cycle yet
     }
 }
