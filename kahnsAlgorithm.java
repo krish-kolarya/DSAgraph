@@ -63,9 +63,8 @@ public class kahnsAlgorithm {
             for (Integer neighbor : adj.get(front)) {
                 indegree[neighbor]--;
                 // If indegree becomes 0, add the neighbor to the queue.
-                if (indegree[neighbor] == 0) {
+                if (indegree[neighbor] == 0) 
                     queue.add(neighbor);
-                }
             }
         }
         return result;

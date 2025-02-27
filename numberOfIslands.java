@@ -29,7 +29,7 @@ public class numberOfIslands {
         sc.close();
     }
     public static void dfs(int i,int j,int[][] matrix,int[][] dir){
-        matrix[i][j] = 0;
+    /**/matrix[i][j] = 0; /* Instead of maintaining a visited 2d array, I am changing the visited cells of the matrix (having value 1) to 0*/
         for(int[] arr : dir){
             int row = arr[0] + i;
             int col = j + arr[1];

@@ -44,7 +44,7 @@ public class numOfProvinces {
 
         for(int i = 0; i < V; i++){
             for(int j = 0; j < V; j++){
-                if(isConnected[i][j] == 1 && i!=j){
+                if(isConnected[i][j] == 1 && i!=j){ // an edge cannot be because of a single node
                     adjList.get(i).add(j);
                 }
             }
